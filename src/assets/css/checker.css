@@ -1,0 +1,30 @@
+/* Results */
+.results {
+  transition: opacity 0.2s;
+  text-align: center;
+  font-size: 3em;
+}
+.results.unknown {
+  opacity: 0;
+}
+.ok-result > b {
+  display: inline-block;
+}
+.ok-result.ok > b {
+  display: none;
+}
+.ok-result {
+  transition: color 0.2s;
+}
+.ok-result.ok {
+  color: green;
+}
+.ok-result.not-ok {
+  color: red;
+}
+
+.ok-icon {
+  display: block;
+  font-size: 3em;
+  line-height: 1;
+}

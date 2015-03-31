@@ -1,0 +1,35 @@
+.playerScore {
+  float: left;
+  text-align: center;
+}
+.playerScore__score {
+  font-size: 3em;
+}
+.scoreCard__actions .btn {
+  width: 100%;
+}
+
+input.scoreCard__input {
+  height: 2.5rem;
+}
+.scoreCard__details {
+  text-align: right;
+}
+
+.scoreCard__sectionContainer {
+  position: relative;
+  margin-top: 1.5em;
+}
+.scoreCard__section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: opacity 300ms, transform 300ms;
+  -moz-transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+}
+.scoreCard__section.scoreCard__hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+}

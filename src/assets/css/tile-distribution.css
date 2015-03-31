@@ -1,0 +1,8 @@
+.tileDistribution {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+}
+.tileDistribution__freq {
+  white-space: nowrap;
+}

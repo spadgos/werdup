@@ -1,0 +1,40 @@
+{
+  "name": "werdup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "browserify src/app.js | uglifyjs --compress warnings=false --mangle -- - > dist/werdup.min.js && echo \"`gzip -c dist/werdup.min.js | wc -c` bytes gzipped.\"",
+    "watch": "watchify src/app.js -o dist/werdup.js -d -v",
+    "server": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "browserify-css": "0.4.0",
+    "immutable": "3.6.4",
+    "lodash": "3.6.0",
+    "materialize-css": "0.95.3",
+    "react": "0.13.1",
+    "react-router": "0.13.2"
+  },
+  "devDependencies": {
+    "browserify": "9.0.3",
+    "browserify-shim": "3.8.3",
+    "clean-css": "3.1.8",
+    "node-static": "0.7.6",
+    "reactify": "1.1.0",
+    "uglify-js": "2.4.19",
+    "watchify": "2.6.1"
+  }
+}

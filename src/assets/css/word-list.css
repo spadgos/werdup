@@ -1,0 +1,13 @@
+.wordList__list {
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  columns: 3;
+  font-size: 2em;
+}
+
+.wordList__list li {
+  text-align: center;
+}
+.wordList input.select-dropdown {
+  font-size: 2.5em;
+}

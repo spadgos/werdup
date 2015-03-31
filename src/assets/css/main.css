@@ -1,0 +1,9 @@
+@import "./materialize.min.css";
+@import "./inputs.css";
+@import "./checker.css";
+@import "./word-list.css";
+@import "./tile-distribution.css";
+@import "./tile.css";
+@import "./score-card.css";
+@import "./player-select.css";
+@import "./misc.css";
