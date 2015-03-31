@@ -8,7 +8,7 @@ module.exports = TileDistribution = React.createClass({
   render: function () {
     var tiles = Tiles.getTileDistribution().map((tile) => {
       return (
-        <div className="tileDistribution__freq">
+        <div className="tileDistribution__freq" key={tile.letter}>
           <Tile data={tile} /> x {tile.frequency}
         </div>
       );

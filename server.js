@@ -1,5 +1,5 @@
 var static = require('node-static');
-var fileServer = new static.Server('./');
+var fileServer = new static.Server('./dist');
 
 console.log('Server running at http://localhost:8080');
 require('http').createServer(function (request, response) {
