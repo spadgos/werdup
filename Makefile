@@ -11,13 +11,25 @@ FONTS_SRC  := $(shell find src/assets/font -type f -name "*.ttf" -o -name "*.eot
 FONTS_DIST := $(patsubst src/assets/%,$(DIST)/%,$(FONTS_SRC))
 
 
-.PHONY: build clean
+.PHONY: build clean gh-pages
 
 build: $(JS_MIN) $(CSS_MIN) $(INDEX) $(FONTS_DIST) $(DIST)/favicon.ico $(DIST)/werdup.appcache
 	@#
 
 clean:
 	rm -rf $(DIST)
+
+gh-pages: build
+	git checkout --orphan gh-pages master && \
+	rm -f .git/index && \
+	rm dist/werdup.js && \
+	cp -r dist/** . && \
+	git add index.html css/ font/ favicon.ico werdup.appcache werdup.min.js && \
+	git commit -m "Automatic update" && \
+	git push --force origin gh-pages && \
+	git checkout master -f && \
+	git branch -D gh-pages
+
 
 $(JS_MIN): $(JS_FULL)
 	cat src/jquery-2.1.3.min.js src/materialize.min.js $(JS_FULL) | $(BIN)/uglifyjs --compress warnings=false --mangle -- - > $@
