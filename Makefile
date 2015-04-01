@@ -11,13 +11,21 @@ FONTS_SRC  := $(shell find src/assets/font -type f -name "*.ttf" -o -name "*.eot
 FONTS_DIST := $(patsubst src/assets/%,$(DIST)/%,$(FONTS_SRC))
 
 
-.PHONY: build clean gh-pages
+.PHONY: build clean gh-pages watch
 
 build: $(JS_MIN) $(CSS_MIN) $(INDEX) $(FONTS_DIST) $(DIST)/favicon.ico $(DIST)/werdup.appcache
 	@#
 
 clean:
 	rm -rf $(DIST)
+
+watch:
+	@watchman watch $(PWD)
+	@echo '["trigger", "$(PWD)", {"name":"rebuild","expression": ["match", "src/**/*.*", "wholename"],"append_files":false,"command":["make"]}]' | watchman -j
+	@echo 'Watching $(PWD) for changes'
+
+stop-watching:
+	watchman watch-del $(PWD)
 
 gh-pages: build
 	git checkout --orphan gh-pages master && \
@@ -48,7 +56,7 @@ $(DIST)/font/%: src/assets/font/%
 	@mkdir -p $(@D)
 	cp $< $@
 
-$(INDEX): index.prod.html
+$(INDEX): src/index.prod.html
 	@mkdir -p $(@D)
 	cp $< $@
 
