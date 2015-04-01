@@ -4,8 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "browserify src/app.js | uglifyjs --compress warnings=false --mangle -- - > dist/werdup.min.js && echo \"`gzip -c dist/werdup.min.js | wc -c` bytes gzipped.\"",
-    "watch": "watchify src/app.js -o dist/werdup.js -d -v",
     "server": "node server.js"
   },
   "author": "",
@@ -32,6 +30,7 @@
     "browserify": "9.0.3",
     "browserify-shim": "3.8.3",
     "clean-css": "3.1.8",
+    "htmlprocessor": "0.1.10",
     "node-static": "0.7.6",
     "reactify": "1.1.0",
     "uglify-js": "2.4.19"

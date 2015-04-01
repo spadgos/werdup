@@ -26,7 +26,6 @@ module.exports = ScoreCard = React.createClass({
       );
     });
 
-    /* move this to a component? */
     return (
       <div>
         <h4>Number of players?</h4>
