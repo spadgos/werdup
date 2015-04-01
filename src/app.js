@@ -19,6 +19,8 @@ var App = React.createClass({
 
   componentWillMount: function () {
     AppDispatcher.dispatch({ actionType: 'init' });
+    var preloader = document.getElementsByClassName('preloader-wrapper')[0];
+    preloader.parentNode.removeChild(preloader);
   },
 
   render: function () {

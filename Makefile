@@ -37,7 +37,7 @@ $(JS_MIN): $(JS_FULL)
 
 $(JS_FULL): $(JS_SRC)
 	@mkdir -p $(@D)
-	$(BIN)/browserify src/app.js -o $@
+	$(BIN)/browserify src/app.js -d -o $@
 
 $(CSS_MIN): $(CSS_SRC)
 	@mkdir -p $(@D)
