@@ -57,7 +57,7 @@ gh-pages: | requires-production clean build
 	git branch -D gh-pages
 
 $(JS_MIN): $(JS_FULL)
-	cat src/jquery-2.1.3.min.js src/materialize.min.js $(JS_FULL) | $(BIN)/uglifyjs --compress warnings=false --mangle -- - > $@
+	cat src/jquery-2.1.3.min.js src/materialize.min.js $(JS_FULL) | $(BIN)/uglifyjs --compress warnings=false --mangle > $@
 	@echo "JS: `gzip -c $@ | wc -c` bytes gzipped."
 
 $(JS_FULL): $(JS_SRC)
