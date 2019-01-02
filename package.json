@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "@spadgos/scrab": "file:../scrab",
     "browserify-css": "0.4.0",
     "immutable": "3.6.4",
     "lodash": "3.6.0",
@@ -33,6 +34,6 @@
     "htmlprocessor": "0.1.10",
     "node-static": "0.7.6",
     "reactify": "1.1.0",
-    "uglify-js": "2.4.19"
+    "uglify-es": "^3.3.9"
   }
 }

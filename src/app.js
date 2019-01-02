@@ -9,7 +9,8 @@ var pages = {
   checker: require('./pages/checker'),
   wordList: require('./pages/word-list'),
   tileDistribution: require('./pages/tile-distribution'),
-  scoreCard: require('./pages/score-card')
+  scoreCard: require('./pages/score-card'),
+  search: require('./pages/search'),
 };
 
 var App = React.createClass({
@@ -42,6 +43,7 @@ var routes = (
     <Route name="word-list" path="/word-list" handler={pages.wordList} />
     <Route name="tile-distribution" path="/tile-distribution" handler={pages.tileDistribution} />
     <Route name="score-card" path="/score-card" handler={pages.scoreCard} />
+    <Route name="search" path="/search" handler={pages.search} />
   </Route>
 );
 

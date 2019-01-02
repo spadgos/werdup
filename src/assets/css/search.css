@@ -1,0 +1,15 @@
+.search__options:not(.isVisible) {
+  display: none;
+}
+
+a.search__optionsTitle {
+  display: block;
+  font-size: 1.5em;
+  text-transform: none;
+  padding: 0 15px;
+  margin: 0 -15px;
+}
+
+.search__options input[type="text"] {
+  font-size: 2em;
+}

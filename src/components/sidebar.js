@@ -10,6 +10,7 @@ module.exports = Sidebar = React.createClass({
         { name: 'WerdUp!',           target: 'home' },
         { name: 'Dictionary',        target: 'check' },
         { name: 'Short Word List',   target: 'word-list' },
+        { name: 'Word Search',       target: 'search' },
         { name: 'Tile Distribution', target: 'tile-distribution' },
         { name: 'Score Card',        target: 'score-card' }
       ]
