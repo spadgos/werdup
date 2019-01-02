@@ -46,6 +46,7 @@ ifneq ($(NODE_ENV), production)
 endif
 
 gh-pages: | requires-production clean build
+	(git branch -D gh-pages || true) && \
 	git checkout --orphan gh-pages master && \
 	rm -f .git/index && \
 	rm $(DIST)/werdup.js && \
