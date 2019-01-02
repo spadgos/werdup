@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# 2015-04-01T00:57:19+00:00
+
+CACHE:
+index.html
+werdup.min.js
+css/werdup.css
+font/material-design-icons/Material-Design-Icons.woff
+font/roboto/Roboto-Bold.ttf
+font/roboto/Roboto-Regular.ttf
+favicon.ico
+
+NETWORK:
+*
